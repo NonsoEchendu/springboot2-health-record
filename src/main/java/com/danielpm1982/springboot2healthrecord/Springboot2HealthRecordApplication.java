@@ -38,8 +38,7 @@ public class Springboot2HealthRecordApplication {
 /*
 At this main class we simply get the Application Context created beans to show the
 externalized properties' values injected at them, at the configuration classes, from
-the 3 external sources: environment variables (set at ),
-.properties files and .yaml files, as above specified.
+the 3 external sources: environment variables, .properties files and .yaml files, as above specified.
 
 The environmet varirables that should be set at menu Run/Edit Configurations/Environment variables,
 are: HOSPITAL_NAME=danielpm1982 Hospitals;USER_NAME=happyManager . If not set, a ClassCastException
