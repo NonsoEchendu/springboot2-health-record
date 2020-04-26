@@ -4,6 +4,7 @@ import com.danielpm1982.springboot2healthrecord.controller.ProfessionalControlle
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
+import java.util.List;
 
 @SpringBootApplication
 public class Springboot2HealthRecordApplication {
@@ -27,5 +28,9 @@ public class Springboot2HealthRecordApplication {
         PatientController patientController = (PatientController) ctx.getBean("patientController");
         patientController.showPatient(194878L);
         patientController.showAllPatients();
+
+        //showing data externalized to resources .yaml files
+        List<String> policyRulesList = (List<String>)ctx.getBean("policyRulesList");
+        policyRulesList.forEach(System.out::println);
     }
 }

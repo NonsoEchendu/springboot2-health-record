@@ -14,9 +14,11 @@ import java.util.*;
 public class BootstrapDataConfiguration {
     private ExternalizedPropertiesLoader externalizedPropertiesLoader;
     private ExternalizedPropertiesEnvironmentLoader externalizedPropertiesEnvironmentLoader;
-    public BootstrapDataConfiguration(ExternalizedPropertiesLoader externalizedPropertiesLoader, ExternalizedPropertiesEnvironmentLoader externalizedPropertiesEnvironmentLoader) {
+    private ExternalizedPropertiesYAMLLoader externalizedPropertiesYAMLLoader;
+    public BootstrapDataConfiguration(ExternalizedPropertiesLoader externalizedPropertiesLoader, ExternalizedPropertiesEnvironmentLoader externalizedPropertiesEnvironmentLoader, ExternalizedPropertiesYAMLLoader externalizedPropertiesYAMLLoader) {
         this.externalizedPropertiesLoader = externalizedPropertiesLoader;
         this.externalizedPropertiesEnvironmentLoader = externalizedPropertiesEnvironmentLoader;
+        this.externalizedPropertiesYAMLLoader = externalizedPropertiesYAMLLoader;
     }
     @Scope("singleton")
     @Bean
@@ -66,5 +68,10 @@ public class BootstrapDataConfiguration {
     @Bean(name="userName")
     public String userNameSetFromExternalEnvData(){
         return externalizedPropertiesEnvironmentLoader.getEnvironmentDataMap().get("userName");
+    }
+    @Scope("singleton")
+    @Bean(name="policyRulesList")
+    public List<String> policyRulesList(){
+        return externalizedPropertiesYAMLLoader.getPolicyRulesList();
     }
 }

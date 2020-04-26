@@ -1,0 +1,15 @@
+#This is just a structured mock statement for showing how to externalize Spring properties using YAML files
+spring:
+  profiles: en
+policy:
+  rule1: "Rule1: all patients must pay for their costs to this hospital, either at the entering or at a later time in case of emergency."
+  rule2: "Rule2: patients are ultimately responsible for the agreement with their diagnostic and therapeutic plans prescribed by our Clinical Pharmacists, Clinical Nurses, Clinical Physicians and all other health care professionals from our team. Patients won't be imposed any diagnostic or therapeutic protocol without their explicit and fully-informed consent."
+  rule3: "Rule3: this hospital, and all its clinical professionals, are bound to Science and Ethics, within their respective professions, and all actions, services and protocols developed or prescribed to any patient must be in consonance with the law, ethics, science and above all with God. Said that, experimental treatments are allowed within experimental protocolos, writtenly accepted by, and fully explained to, the specific patient, in case there's no other validated form of treatment for his clinical condition, with the approval of each profession Directors of the hospital - Pharmacist Director, Nurse Director and Physician Director. For experimental treatments, at least minimum in vitro and in vivo evidences must be available, though not necessarily full clinical prospective cohort studies."
+
+---
+spring:
+  profiles: ptbr
+policy:
+  rule1: "Regra1: todos os pacientes devem pagar por todos os seus custos a este hospital, seja na entrada ou em momento posterior, no caso de emergências."
+  rule2: "Regra2: os pacientes são em última instância os responsáveis pelo aceite quanto a planos de diagnóstico e terapêuticos prescritos por nossos Farmacêuticos Clínicos, Enfemeiros Clínicos, Médicos Clínicos e todos os demais profissionais de atenção clínica de nossa equipe. Os pacientes não serão obrigados a aceitar qualquer protocolo de diagnóstico ou terapia contrários a seu explícito e completamente informado consentimento."
+  rule3: "Regra3: este hospital, e todos os seus profissionais clínicos, estão comprometidos com a Ciência e a Ética, dentro de suas respectivas profissões, e todas as ações, serviços e protocolos desenvolvidos ou prescritos para qualquer paciente deve estar em consonância com a lei, a ética, a ciência e, acima de tudo, a Deus. Dito isto, tratamentos experimentais são permitidos dentro de protocolos experimentais, aceitos por escrito e explicados por completo ao paciente expecífico, nos casos onde não haja outra forma de tratamento validada para sua condição clínica, com a aprovação dos diretores de cada profissão no hospital - Diretor Farmacêutico, Diretor Enfermeiro e Diretor Médico. Para tratamentos experimentais, pelo menos mínimas evidências in vitro e in vivo devem estar disponíveis, apesar de não necessariamente estudos clínicos cohort prospectivos completos."
