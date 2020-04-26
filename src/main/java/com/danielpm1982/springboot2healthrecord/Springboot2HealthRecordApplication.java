@@ -69,15 +69,19 @@ and turn it available to external beans or classes through public get methods.
 
 Still at the configuration package, the BootstrapDataConfiguration class injects itself all loader beans,
 in order to get all bootstrapped raw data, transform it into the correct final Objects and use these to create
-the respective Application Context beans that will be turned available to the main class to get and display their
-values at the console.
-In the case of String or List<String> types, it is done directly, but in the case of the more complex ones, it is
-done by using the load classes: PatientLoad, ConsultationLoad and ProfessionalLoad as types (which themselves are
-lists of the respective objects).
+the respective final beans that will be turned available to the main and to the controller classes.
+
+In the case of the beans with the data from the evironemnt variables and .yaml sources, which are simple String
+or List<String> beans whose data does not need to be added to the DB, it is done directly: after creation of these
+simple beans, the main class just get them and shows their values. But in the case of the more complex data beans,
+whose data is still to be added to the DB, it is done by using the load classes: PatientLoad, ConsultationLoad and
+ProfessionalLoad (which themselves are lists of the respective objects). These load beans are then injected at the
+controllers for the respective data to be added to the DB, at initialization (@PostConstruct). For retrieving and
+showing that data at the main class, the same controllers have accessor "show" methods for that.
 
 At the configuration package, the Db configuration class also creates the bean for the Db repository class,
 just for showing how to create a bean through a java class with @Configuration, @Bean and @Scope annotations,
-intead of with @Component or other extended annotations (as @Repository or @Service) at the base classe itself
+intead of with @Component or other extended annotations (as @Repository or @Service) at the base class itself
 (as done with the other repository and service classes, except the Db one).
 
 After all that, the main class can get the beans and show their values at the console. No GUI view has been
