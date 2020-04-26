@@ -47,8 +47,8 @@ is thrown.
 As with any typical MVC application, the entity classes, the repositories and services are located
 at the domain, repository and service packages, while the controllers are located at the controller
 package. Entities are used at the repository classes, including at the DB class; repository objects
-are Service classes, and the objects of these are, in turn, injected at the controller classes, from
-which all operations over patients (and patient records) and professionals are to be called.
+are injected into Service classes, and the objects of these are, in turn, injected at the controller
+classes, from which all operations over patients (and patient records) and professionals are to be called.
 
 Regarding the domain entities relationship structure, both Patient and Profesional extends Person;
 PatientRecord aggregates a list of Consultation - 1:n; and Patient aggregates PatientRecord - 1:1.
@@ -64,14 +64,14 @@ All bootstrap Data is managed by Configuration classes and later pushed into the
 methods at the controllers.
 
 At the configuration package, each data source has a loader @Component bean class, which reads the properties' values
-from the evironment variables, .properties files or .yaml files, injects that raw data into local fields (through @Value)
+from the evironment variables, .properties files and .yaml files, injects that raw data into local fields (through @Value)
 and turn it available to external beans or classes through public get methods.
 
-Still at the configuration package, the BootstrapDataConfiguration class injects itself all loader bean classes,
+Still at the configuration package, the BootstrapDataConfiguration class injects itself all loader beans,
 in order to get all bootstrapped raw data, transform it into the correct final Objects and use these to create
 the respective Application Context beans that will be turned available to the main class to get and display their
 values at the console.
-In the case of String or List<String> types, it is done directly, but in the case of the more complex types, it is
+In the case of String or List<String> types, it is done directly, but in the case of the more complex ones, it is
 done by using the load classes: PatientLoad, ConsultationLoad and ProfessionalLoad as types (which themselves are
 lists of the respective objects).
 
@@ -82,6 +82,6 @@ intead of with @Component or other extended annotations (as @Repository or @Serv
 
 After all that, the main class can get the beans and show their values at the console. No GUI view has been
 implemented here. The only goal was to show how beans can be created and how properties can have their values
-loaded from different external sources.
+loaded from (or externalized to) different external sources.
 
 */
