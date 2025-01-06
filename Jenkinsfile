@@ -15,15 +15,9 @@ pipeline {
     }
     
     stages {
-        stage('Clone Repository') {
+        stage('checkout') {
             steps {
-                script {
-                    sh """
-                        if [ ! -d "${params.FOLDER_PATH}" ]; then
-                            git clone ${params.GIT_REPO}
-                        fi
-                    """
-                }
+                checkout scm
             }
         }
         
