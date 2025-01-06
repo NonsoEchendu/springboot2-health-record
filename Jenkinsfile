@@ -42,7 +42,6 @@ pipeline {
                 script {
                     withSonarQubeEnv(SONARQUBE) {
                         sh """
-                            cd ${params.FOLDER_PATH}
                             mvn clean verify sonar:sonar -DskipTests
                         """
                     }
@@ -56,7 +55,6 @@ pipeline {
                 echo 'Building app...'
                 script {
                     sh """
-                        cd ${params.FOLDER_PATH}
                         mvn clean package -DskipTests
                     """
                 }
@@ -85,7 +83,6 @@ pipeline {
                     
                     // First build with Maven
                     sh """
-                        cd ${params.FOLDER_PATH}
                         mvn clean install -DskipTests
                     """
                     
