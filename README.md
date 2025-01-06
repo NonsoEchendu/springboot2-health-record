@@ -1,24 +1,12 @@
 # springboot2-health-record
-This is a Health Record application developed with Spring Boot 2
+This is a Health Record application developed with Spring Boot 2. 
+A Jenkinsfile has been added for CI/CD. The Jenkins pipeline automates the build, test, and deployment process for the Spring Boot Health Record application. The pipeline also includes source control management, code quality analysis with SonarQube, and artifact publishing to JFrog's Artifactory.
 
-© 2020 Daniel Pinheiro Maia All Rights Reserved<br>
-(see Copyright© License at the end of this text).
+Here's an in-depth step-by-step breakdown of the stages and steps in the pipeline:
 
-![testResultScreenshot](https://github.com/danielpm1982/springboot2-health-record/blob/master/src/main/java/com/danielpm1982/springboot2healthrecord/testResultScreenshot/testResultScreenshot1.png)
-![testResultScreenshot](https://github.com/danielpm1982/springboot2-health-record/blob/master/src/main/java/com/danielpm1982/springboot2healthrecord/testResultScreenshot/testResultScreenshot2.png)
-![testResultScreenshot](https://github.com/danielpm1982/springboot2-health-record/blob/master/src/main/java/com/danielpm1982/springboot2healthrecord/testResultScreenshot/testResultScreenshot3.png)
 
-[**Description of this repository**]<br>
-This is a Health Record application developed with Spring Boot 2. The objective of this project is to demonstrate how to use @Configuration and @Bean - instead of @Component or its extended annotations - for the creation of Spring beans and scope setting. Also, we show how to externalize bean properties to standard and custom-named .properties files, environment variables and .yaml files, and how to inject them into beans with @PropertySource and @Value annotations. Automated selection of externalized properties to be injected (same keys, different values), according to different active profiles, is also examplified. All initial bootstrap data about Patients, Professionals and Consultations, as well as hospital description and policy rules are injected from .properties files, environment variables and .yaml files, according to different active profiles settable at application.properties (either "en" or "ptbr"). Additional custom data can then be added from the Controllers and Service interfaces. No Web View has been implemented. And the DB used is simply a Java Collection-based in-memory one, with no JPA or JDBC, with manual @Repository and @Service classes implementations (no Spring Data used). Stereotype annotations used: @Configuration, @Bean, @Scope, @PropertySources, @PropertySource, @Value, @Component, @PostConstruct, @Controller, @Repository, @Service, @Autowired, @SpringBootApplication (@Configuration + @ComponentScan + @EnableAutoConfiguration). For more info, read the project comments at each class, starting from the @SpringBootApplication Main class. Worth mentioning here, there are at least 4 ways of creating beans in Spring: XML bean configuration, @Component Annotations, Java config classes - using @Configuration and @Bean - and Groovy scripts DSL configuration. And also, there are 7 different standard scopes Spring beans can be set with: singleton, prototype, request, session, global-session, application and websocket. You can create and define your own custom scope as well. For more, see Spring 5 and Spring Boot 2 documentations, at: <br> https://docs.spring.io/spring/docs/5.2.5.BUILD-SNAPSHOT/spring-framework-reference/ <br> and <br> https://docs.spring.io/spring-boot/docs/2.3.0.BUILD-SNAPSHOT/reference/html/getting-started.html#getting-started .
 
-The backlog for this agile developed project is simulated through the sequence of its GitHub issues, and respective referred commits, available at: https://github.com/danielpm1982/springboot2-health-record/issues?q=is%3Aissue .
 
-This repository is a single-project repo with Git version control.
-
-Some of my repositories are for backup only, each of them being a collection of tens of projects inside one same repo (with no individual version control for each project), and others are single-project repositores (with effective version control for that single project). As a distinction between them, the backup repos are named in uppercase with underscores (e.g. SPRING3) while the single-project ones are named in lowercase with dashes (e.g. springboot2-ac-di).
-
-See all my public repositories at:
-https://github.com/danielpm1982?tab=repositories .
 
 [**Copyright© License**]<br>
 © 2020 Daniel Pinheiro Maia All Rights Reserved<br>
