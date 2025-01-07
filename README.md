@@ -31,7 +31,7 @@ Sonarqube:
 <img width="1512" alt="Screenshot 2025-01-07 at 01 18 17" src="https://github.com/user-attachments/assets/c2e690f3-87e5-4b4d-adab-aefc2a583b5f" />
 
 
-
+<br/>
 <br/> 
 
 Artifactory:
