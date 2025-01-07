@@ -2,11 +2,11 @@ pipeline {
     agent any
 
     parameters {
-        string(name: 'FOLDER_PATH', defaultValue: 'springboot2-meeting-mng', description: 'Folder Path Directory')
+        string(name: 'FOLDER_PATH', defaultValue: 'springboot2-health-record', description: 'Folder Path Directory')
         string(name: 'GROUP_ID', defaultValue: 'com.danielpm1982', description: 'Maven Group ID')
-        string(name: 'ARTIFACT_ID', defaultValue: 'springboot2-meetingmng', description: 'Maven Artifact ID')
+        string(name: 'ARTIFACT_ID', defaultValue: 'springboot2-health-record', description: 'Maven Artifact ID')
         string(name: 'VERSION', defaultValue: '0.0.1-SNAPSHOT', description: 'Project Version')
-        string(name: 'GIT_REPO', defaultValue: 'https://github.com/NonsoEchendu/springboot2-meeting-mng.git', description: 'Git Repository URL')
+        string(name: 'GIT_REPO', defaultValue: 'https://github.com/danielpm1982/springboot2-health-record.git', description: 'Git Repository URL')
     }
     
     environment {
