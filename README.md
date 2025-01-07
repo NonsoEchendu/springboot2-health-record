@@ -1,9 +1,40 @@
 # springboot2-health-record
 This is a Health Record application developed with Spring Boot 2. 
+
 A Jenkinsfile has been added for CI/CD. The Jenkins pipeline automates the build, test, and deployment process for the Spring Boot Health Record application. The pipeline also includes source control management, code quality analysis with SonarQube, and artifact publishing to JFrog's Artifactory.
 
-Here's an in-depth step-by-step breakdown of the stages and steps in the pipeline:
+Here's an article that gives an in-depth step-by-step breakdown of the stages and steps in the pipeline:
+[Check here](https://dev.to/nonso_echendu_001/deploying-jenkins-in-aws-with-integration-to-artifactory-and-sonarqube-2348)
 
+**Prerequisites to run the pipeline script:**
+
+These tools need to be installed:
+
+- Maven 
+- Artifactory 
+- Sonarqube 
+- they both need to be configured on your jenkins server
+
+**To run the pipeline script:**
+
+- create a Jenkins job (pipeline)
+- select Pipeline script from SCM
+- paste in this git repo link
+- then build
+
+These are examples of the Sonarqube analysis report done, and uploaded artifacts on JFrog's Artifactory:
+
+Sonarqube:
+
+<img width="1512" alt="Screenshot 2025-01-07 at 01 18 17" src="https://github.com/user-attachments/assets/c2e690f3-87e5-4b4d-adab-aefc2a583b5f" />
+
+
+
+<br/> 
+
+Artifactory:
+
+<img width="1512" alt="Screenshot 2025-01-06 at 13 29 47" src="https://github.com/user-attachments/assets/8052233f-4414-4279-a9ba-f49665732d3a" />
 
 
 
