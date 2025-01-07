@@ -18,8 +18,7 @@ These tools need to be installed:
 For a comprehensive guide on how to install these tools, and configure your jenkins with AWS, check this [article](https://dev.to/nonso_echendu_001/deploying-jenkins-on-aws-installing-and-configuring-artifactory-and-sonarqube-on-seperate-ec2-nm9) i wrote on it. 
 
 
-<br/>
-<br/> 
+
 <br/>
 <br/> 
 
